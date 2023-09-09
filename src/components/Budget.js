@@ -5,8 +5,16 @@ const Budget = () => {
     const { budget } = useContext(AppContext);
     const [newBudget, setNewBudget] = useState(budget);
     const handleBudgetChange = (event) => {
-        setNewBudget(event.target.value);
-    }
+        const value = event.target.value;
+
+        if (value > 20000) {
+            window.alert('Budget cannot exceed £20,000');
+            setNewBudget(20000); // Set it to the maximum allowed value
+        } else {
+            setNewBudget(value);
+        }
+    };
+    
     return (
 <div className='alert alert-secondary'>
 <span>Budget: £   </span>
