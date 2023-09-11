@@ -4,6 +4,16 @@ import { AppContext } from '../context/AppContext';
 
 const ExpenseItem = (props) => {
     const {selectedCurrency} = props; // Receive the selected currency as a prop
+    const optionStyle1 = {
+        // width: '10px',
+        // height: '10px',
+        color: 'white',
+        fontSize: '120%',
+        fontWeight: 'bold',
+        backgroundColor: 'forestgreen',
+        borderRadius: '50%',
+        borderWidth: '0',
+    };
     const { dispatch } = useContext(AppContext);
 
     const handleDeleteExpense = () => {
@@ -30,7 +40,7 @@ const ExpenseItem = (props) => {
         <tr>
         <td>{props.name}</td>
         <td>{selectedCurrency}{props.cost}</td>
-        <td><button onClick={event=> increaseAllocation(props.name)}>+</button></td>
+        <td ><button style={optionStyle1} onClick={event=> increaseAllocation(props.name)}> + </button></td>
         <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
         </tr>
     );
