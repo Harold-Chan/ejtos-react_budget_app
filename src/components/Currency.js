@@ -22,10 +22,10 @@ const Currency = (props) => {
                 onChange={handleChange}
                 value={selectedCurrency}
             >
-                <option value="Dollar" name="dollar">$ Dollar</option>
-                <option value="Pound" name="pound">£ Pound</option>
-                <option value="Euro" name="euro">€ Euro</option>
-                <option value="Ruppee" name="ruppee">₹ Ruppee</option>
+                <option value="$" name="dollar">$ Dollar</option>
+                <option value="£" name="pound">£ Pound</option>
+                <option value="€" name="euro">€ Euro</option>
+                <option value="₹" name="ruppee">₹ Ruppee</option>
             </select>
         </div>
     );
